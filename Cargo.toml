@@ -1,0 +1,8 @@
+[package]
+name = "random-generator"
+version = "0.1.0"
+authors = ["everbot <everbot@live.com>"]
+
+[dependencies]
+rand = "*"
+chrono = "*"
