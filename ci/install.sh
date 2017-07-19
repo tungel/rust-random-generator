@@ -1,6 +1,6 @@
 # installing rustup
-# curl https://sh.rustup.rs -sSf | sh -s -- -y --default-toolchain=$TRAVIS_RUST_VERSION
-curl https://sh.rustup.rs -sSf | sh
+curl https://sh.rustup.rs -sSf | sh -s -- -y --default-toolchain=$TRAVIS_RUST_VERSION
+# curl https://sh.rustup.rs -sSf | sh -s -- -y
 rustc -V
 cargo -V
 
