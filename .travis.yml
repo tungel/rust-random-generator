@@ -23,4 +23,4 @@ deploy:
   skip_cleanup: true
   on:
     # tags: true
-    repo: tungel/rust-random-generator 
+    repo: tungel/rust-random-generator
