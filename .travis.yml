@@ -8,13 +8,13 @@ cache: cargo
 rust:
   - stable
 script:
-  - cargo build --verbose
+  - cargo build --release --verbose
   - cargo test --verbose
 deploy:
   provider: releases
   api_key:
     secure: VLMnovTUDcOiUhcU+JxTMh51OKJs2NsMVGNkLVx8gFuBrGH6Su5mTBtIiPCqI19sdVNz7MdJZz6XPWjALVc8fVskIY6zxMdewrJluUOKEG0u7c6/wLsUif3CkMToVPA3QYs8TgfTVO/SEg1exh4LYisIjp9rQ/hikbGp94hNp1IUDrCc/YpJCJHitaQlpJAnVa7Aj3ap+pph0X6ieaDvvBQxHGuDEPKbp1o5QpbtpOsMd5unRaVKBYVuMNVgX5k2u86LkJ0QVTVCApMbYQUM54NXD0pKcnBn9n8yB4BT7PiEUYL1cddJRShhYxGFQcokugXzhUskGu91ZIbs8jqEHMsZvUUac9zYSXNkYmoVm9XnxDUmXM6TaCh3AdEw1mo5EkSEWdhBwTWpkHrfWDPD7gPHCW5rqtTi+fQgOYq9g56e7d9nsHgqLMMM/yJ1iB5QrX5pUi2Z5SigeMOJB/Zr3j3mYu1FbCl0PBA4eQchM5141jlDZyQl+F8OMSn44hv3eFy0Isf2Eg8MET35clGAOuSo7Ov7kuBkBbLvxcuscMNEPOK18nBaf0341NfZMx43fP4AmY/sFHMB6xsf/p5vx3FhVXkNpRFydxbKEs0CROdFOoSbWvfYr5T3t7Fi/EVsqQyp8FMuy0FNstU7kbT4oyG6oMxOhXEW7NlWHJoipjg=
-  file: target/debug/random-generator
+  file: target/release/random-generator
   skip_cleanup: true
   on:
-    repo: tungel/rust-random-generator
+    tags: true
