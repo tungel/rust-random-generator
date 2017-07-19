@@ -3,12 +3,13 @@ language: rust
 env:
   global:
     - PROJECT_NAME=rust-random-generator
+    - TARGET=x86_64-unknown-linux-musl
 
 cache: cargo
 rust:
   - stable
 script:
-  - cargo build --release --verbose
+  - cargo build --release --target $TARGET --verbose
   - cargo test --verbose
 deploy:
   provider: releases
@@ -17,4 +18,5 @@ deploy:
   file: target/release/random-generator
   skip_cleanup: true
   on:
-    tags: true
+    # tags: true
+    repo: tungel/rust-random-generator 
