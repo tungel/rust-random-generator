@@ -22,5 +22,5 @@ deploy:
   file: target/x86_64-unknown-linux-musl/release/random-generator
   skip_cleanup: true
   on:
-    # tags: true
+    tags: true
     repo: tungel/rust-random-generator
